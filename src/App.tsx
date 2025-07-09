@@ -11,7 +11,8 @@ import TravelMarker from './components/TravelMarker';
 import TravelControls from './components/TravelControls';
 import { sampleWalkingData } from './data/travelData';
 
-Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4YjcxNmU5Mi1hNmNjLTRhOTItOTRiOS1mZDkyM2QxMDcyMTciLCJpZCI6MzE5NDQ3LCJpYXQiOjE3NTE5NTE2ODN9.63K64fwes1i6yWda-bR0ldWKMfLmCqN-HAkfxZVNWeM';
+// Set Cesium Ion access token from environment variable
+Ion.defaultAccessToken = import.meta.env.VITE_CESIUM_ION_ACCESS_TOKEN;
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
